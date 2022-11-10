@@ -10,8 +10,7 @@
   margin: auto;
   display: flex;
   margin-top: 25px;
-  position: sticky;
-  top: 0;
+
   background-color: white;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -21,6 +20,9 @@
   /* border: 1px solid green; */
   width: 55%;
   height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .nav-left > img {
   height: 100%;
@@ -28,6 +30,13 @@
 }
 .nav-left > img:hover {
   cursor: pointer;
+}
+#search {
+  margin-left: 30px;
+  height: 35px;
+  padding: 5px 100px;
+  border-radius: 30px;
+  border: 2px solid rgb(143, 141, 141);
 }
 .nav-right {
   /* border: 1px solid blue; */
@@ -63,54 +72,6 @@
 .review:hover {
   background-color: rgb(226, 226, 226);
   cursor: pointer;
-}
-
-#options {
-  width: 80%;
-  height: 100px;
-  /* border: 1px solid black; */
-  margin: auto;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.hotels {
-  border: 1px solid rgb(3, 3, 3);
-  border-radius: 15px;
-  height: 50%;
-  width: 155px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0px 10px;
-  font-size: large;
-}
-.hotels:hover {
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}
-#searchbar {
-  height: auto;
-  width: 78%;
-  /* border: 1px solid black; */
-  margin: auto;
-}
-#searchbar > img {
-  width: 100%;
-}
-#searchbar > div > input {
-  padding: 20px 350px;
-  border-radius: 30px;
-  border: none;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-#searchbar > div {
-  /* border: 1px solid red; */
-  display: flex;
-  justify-content: center;
-  margin-top: -200px;
 }
 #footer {
   height: 350px;
@@ -236,56 +197,58 @@
 .a-tags > a {
   color: black;
 }
-#experience {
-  width: 78%;
-  margin: auto;
-  margin-top: 180px;
-  line-height: 30px;
-}
-#experience > h3 {
-  font-weight: lighter;
-  font-size: medium;
-}
-#experience-cards-parent {
-  width: 80%;
-  height: 350px;
-  /* border: 1px solid red; */
-  margin: auto;
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-.experience-cards-child {
-  height: 100%;
-  width: 23%;
-  /* border: 1px solid black; */
-}
-#getoutthere {
-  width: 80%;
-  margin: auto;
-  height: 220px;
+#mid {
+  width: 100%;
+  height: 700px;
+  border: 1px solid #faf1ed;
   background-color: #faf1ed;
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
+}
+#mid > h1 {
+  margin-top: 130px;
+  margin-bottom: 20px;
+}
+#mid > input {
+  margin-top: 20px;
+  padding: 15px 280px;
+  border-radius: 25px;
+  border: 2px solid black;
+}
+.cards {
+  height: 250px;
+  width: 40%;
+  /* border: 1px solid blue; */
+  margin: auto;
+  margin-top: 45px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.getoutthere-left {
-  margin-left: 15px;
-  padding-top: 45px;
+#beenhere {
+  width: 80%;
+  height: 120px;
+  border: 1px solid rgb(187, 186, 186);
+  margin: auto;
+  margin-top: 40px;
+  padding: 30px;
 }
-.getoutthere-left > button {
-  margin-top: 50px;
-  padding: 15px 30px;
-  border-radius: 25px;
-  background-color: black;
-  color: white;
-  border: none;
+#beenhere > div {
+  display: flex;
+  gap: 25px;
+  margin-top: 25px;
+}
+#beenhere > div > div {
+  display: grid;
+  /* gap: 5px; */
+}
+#beenhere > div > div > a {
+  text-decoration: none;
+  color: black;
   font-size: large;
+  font-weight: bold;
 }
-.getoutthere-left > button:hover {
-  cursor: pointer;
-  background-color: rgb(55, 55, 55);
-}
-#getoutthere:hover {
-  cursor: pointer;
+#beenhere > div > div > a:hover {
+  color: grey;
+  text-decoration: underline;
 }
