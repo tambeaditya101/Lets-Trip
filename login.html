@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup & Login</title>
+    <link rel="stylesheet" href="login.css" />
+    
+    
+  </head>
+  <body>
+    <div class="login-page">
+      
+        <form class="l-form">
+          <input type="text" name="" id="username" placeholder="user name" />
+          <input type="password" id="password" placeholder="password" />
+          <button>Login</button>
+          <p class="message">Not Registered <a href="signup.html">Register</a></p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+    document.querySelector("button").addEventListener("click", login);
+    let logindata = JSON.parse(localStorage.getItem("signInfo"))
+    
+    
+    function login(event){
+        event.preventDefault();
+        username= document.querySelector("#username").value
+        password= document.querySelector("#password").value;
+
+        let present = false; 
+        logindata.forEach((elem)=>{
+        
+        if (elem.username == username && elem.password == password){
+            present = true;
+        
+        }
+        
+      })
+      if(present == true){
+          alert("Login Success")
+          window.location.href = "index.html";
+        }else{
+            alert("No user found !.. signup first")
+            window.location.href = "signup.html";
+        }
+
+    }
+
+</script>

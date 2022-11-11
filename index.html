@@ -58,7 +58,7 @@
           <a href="">Alerts</a>
         </div>
         <div class="review">
-          <a style="color: white" href="">Sign in</a>
+          <a style="color: white" id="signedIn" href="login.html">Sign in</a>
         </div>
 
         <div class="review">
@@ -343,3 +343,9 @@
     </div>
   </body>
 </html>
+
+<script>
+  if (login()) {
+    document.querySelector("#signedIn").innerHTML = username;
+  }
+</script>
