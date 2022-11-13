@@ -10,7 +10,7 @@
   <body>
     <div id="navbar">
       <div class="nav-left">
-        <img width="100px" src="trip'o.png" alt="" />
+        <a href="index.html"><img width="150px" src="trip'o.png" /></a>
         <input type="text" name="" id="search" placeholder="search" />
       </div>
       <div class="nav-right">
@@ -54,7 +54,7 @@
           <a href="">Alerts</a>
         </div>
         <div class="review">
-          <a style="color: white" href="">Sign in</a>
+          <a style="color: white" href="login.html">Sign in</a>
         </div>
 
         <div class="review">
@@ -81,9 +81,21 @@
       <input
         type="text"
         name=""
-        id=""
+        id="catchReview"
         placeholder="What would you like to review ?"
       />
+      <button
+        id="reviewSubmit"
+        style="
+          display: grid;
+          margin: auto;
+          margin-top: 10px;
+          padding: 10px 30px;
+          font-size: large;
+        "
+      >
+        Submit
+      </button>
       <div class="cards">
         <div>
           <img
@@ -105,6 +117,16 @@
         </div>
       </div>
     </div>
+    <h1
+      style="
+        text-align: center;
+        text-decoration: underline;
+        margin-bottom: 20px;
+      "
+    >
+      Your Reviews will be displayed here.
+    </h1>
+    <div id="reviewDisplay"></div>
     <div id="beenhere">
       <h2>Been here ?</h2>
       <div>
@@ -245,3 +267,35 @@
     </div>
   </body>
 </html>
+
+<script>
+  document.querySelector("#reviewSubmit").addEventListener("click", reviewFunc);
+
+  let arr = JSON.parse(localStorage.getItem("review")) || [];
+  showReview(arr);
+  function reviewFunc(event) {
+    event.preventDefault();
+    let reviewMade = document.querySelector("#catchReview").value;
+    let obj = {
+      reviewMade,
+    };
+    arr.push(obj);
+    localStorage.setItem("review", JSON.stringify(arr));
+    showReview(arr);
+  }
+
+  function showReview(arr) {
+    document.querySelector("#reviewDisplay").innerHTML = "";
+    let count = 1;
+    arr.forEach((elem) => {
+      let div = document.createElement("div");
+      div.setAttribute("id", "reviews");
+      let h2 = document.createElement("h2");
+      h2.innerText = count + " -      " + elem.reviewMade;
+
+      div.append(h2);
+      document.querySelector("#reviewDisplay").append(div);
+      count++;
+    });
+  }
+</script>
