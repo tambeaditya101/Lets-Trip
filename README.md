@@ -2,7 +2,7 @@
 # 🌍 Lets-Trip — Discover Your Next Destination
 
 **Lets-Trip** is a simple and visually appealing travel destination website designed to help users explore and choose vacation spots.  
-It focuses on clean design, easy navigation, and interactive elements built using **HTML, CSS, and JavaScript**.
+It focuses on clean design, easy navigation, and interactive elements built using **HTML and CSS**.
 
 ---
 
@@ -12,7 +12,6 @@ It focuses on clean design, easy navigation, and interactive elements built usin
 - **Review Page:** Allows users to read and write reviews for different destinations.  
 - **Login Page:** Simple login form (frontend only, no backend).  
 - **Signup Page:** User registration page with validation.  
-- **Interactive Elements:** Dynamic UI built using vanilla JavaScript.
 
 ---
 
@@ -20,7 +19,6 @@ It focuses on clean design, easy navigation, and interactive elements built usin
 
 - **HTML5** – Structure and content  
 - **CSS3** – Styling and responsiveness  
-- **JavaScript (Vanilla JS)** – Client-side interactivity  
 
 ---
 ## 🚀 How to Run
@@ -33,6 +31,7 @@ It focuses on clean design, easy navigation, and interactive elements built usin
 
 ## 💡 Future Improvements
 
+- Integrate easy functionality with javascript
 - Add backend authentication (Node.js or Firebase).  
 - Integrate Google Maps API to show real locations.  
 - Implement a booking/wishlist feature.  
